@@ -18,13 +18,13 @@ const Main = () => {
                     <p className="uppercase text-sm tracking-widest text-[#e6e2e688] py-4">
                         Enjoy Exploring
                     </p>
-                    <div className='flex items-center justify-between max-w-[330px] m-auto py-8'>
+                    <div className='flex items-center justify-center gap-4 max-w-[330px] m-auto py-8'>
                         <a
                             href='https://www.linkedin.com/in/ahmed-abuzaid-a65732185/'
                             target='_blank'
                             rel='noreferrer'
                         >
-                            <div className='rounded-full shadow-lgp-5 cursor-pointer hover:scale-150 ease-in duration-300'>
+                            <div className='rounded-full p-5 cursor-pointer hover:scale-150 ease-in duration-300'>
                                 <FaLinkedinIn />
 
                             </div>
@@ -34,7 +34,7 @@ const Main = () => {
                             target='_blank'
                             rel='noreferrer'
                         >
-                            <div className='rounded-full shadow-lg p-5 cursor-pointer hover:scale-150 ease-in duration-300'>
+                            <div className='rounded-full p-5 cursor-pointer hover:scale-150 ease-in duration-300'>
                                 <FaGithub />
                             </div>
                         </a>
@@ -43,7 +43,7 @@ const Main = () => {
                             target='_blank'
                             rel='noreferrer'
                         >
-                            <div className='rounded-full shadow-lg p-5 cursor-pointer hover:scale-150 ease-in duration-300'>
+                            <div className='rounded-full p-5 cursor-pointer hover:scale-150 ease-in duration-300'>
                                 <AiOutlineMail />
                             </div>
                         </a>

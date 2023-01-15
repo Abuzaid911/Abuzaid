@@ -4,7 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import NavLogo from '/public/assets/navLogo.png'
+import NavLogo from '/public/assets/navLogo.png';
+import NewLogo from '/public/assets/projects/newlogo.png';
 
 // import { useRouter } from 'next/router';
 
@@ -41,9 +42,9 @@ const Navbar = () => {
                 <Link href='/'>
 
                     <Image
-                        src={NavLogo}
+                        src={NewLogo}
                         alt='/'
-                        width='125'
+                        width='100'
                         height='50'
                         className='cursor-pointer'
                     />
@@ -96,7 +97,7 @@ const Navbar = () => {
                         <div className='flex w-full items-center justify-between'>
                             <Link href='/'>
                                 <Image
-                                    src={NavLogo}
+                                    src={NewLogo}
                                     width='87'
                                     height='35'
                                     alt='/'
