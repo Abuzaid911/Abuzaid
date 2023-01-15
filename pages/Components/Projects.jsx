@@ -14,13 +14,13 @@ const Projects = () => {
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem
             title='ZeePost'
-            backgroundImg={ZeePost}
+            backgroundImage={ZeePost}
             projectUrl='https://zee-post.abuzaid.tech'
             tech='T3 Project'
           />
                 <ProjectItem
             title='Abuzaid Portfolio'
-            backgroundImg={Portfolio}
+            backgroundImage={Portfolio}
             projectUrl='https://abuzaid.tech'
             tech='NextJs'
           />
