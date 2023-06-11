@@ -39,7 +39,7 @@ const Main = () => {
                             </div>
                         </a>
                         <a
-                            href='mailto:sabobee911@gmail.com'
+                            href='mailto:AhmedMohammedAbuzaidAli@gmail.com'
                             target='_blank'
                             rel='noreferrer'
                         >
