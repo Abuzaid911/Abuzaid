@@ -7,7 +7,7 @@ const About = () => {
                 <div className='col-span-2'>
                     <h2 className='py-4 font-roboto Mono text-[#fffefe] flex justify-center'>About Me</h2>
                     <p className='font-mono text-[#cfcfcf]'>
-                        I&#39;m a 22 years old student studying Information Systems at cairo university. I&#39;m passionate about web development and design,
+                        I&#39;m a 24 years old student studying Information Systems at cairo university. I&#39;m passionate about web development and design,
                         Also i&#39;m an avid basketball fan who loves both playing and watching, My fav player is none other than the GOAT LeBron James.
                         And i&#39;m always looking for new ways to expand my knowledge and skillset in the tech world.
                         I&#39;m excited to see how technology can be used to create solutions to everyday problems and to create experiences that make life more enjoyable.
