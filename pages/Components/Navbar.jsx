@@ -39,16 +39,10 @@ const Navbar = () => {
             }
         >
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-                <Link href='/'>
-
-                    <Image
-                        src={NewLogo}
-                        alt='/'
-                        width='100'
-                        height='50'
-                        className='cursor-pointer'
-                    />
-
+                <Link legacyBehavior href='/'>
+                    <a className='text-white text-2xl font-bold cursor-pointer'>
+                        Abu<span className='text-[#b538af]'>z</span>aid
+                    </a>
                 </Link>
 
                 <div>
@@ -95,13 +89,10 @@ const Navbar = () => {
                 >
                     <div>
                         <div className='flex w-full items-center justify-between'>
-                            <Link href='/'>
-                                <Image
-                                    src={NewLogo}
-                                    width='87'
-                                    height='35'
-                                    alt='/'
-                                />
+                            <Link legacyBehavior href='/'>
+                                <a className='text-white text-2xl font-bold cursor-pointer'>
+                                    Abu<span className='text-[#b538af]'>z</span>aid
+                                </a>
                             </Link>
                             <div
                                 onClick={handleNav}

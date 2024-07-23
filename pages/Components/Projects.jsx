@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import ZeePost from '/public/assets/projects/ZeePost.png';
 import Portfolio from '/public/assets/projects/Portfolio.png';
+import GM from '/public/assets/projects/GM.png';
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -15,14 +16,20 @@ const Projects = () => {
           <ProjectItem
             title='ZeePost'
             backgroundImage={ZeePost}
-            projectUrl='https://zee-post.abuzaid.tech'
-            tech='T3 Project'
+            projectUrl='https://zee-post.vercel.app'
+            desc='Social App'
           />
                 <ProjectItem
             title='Abuzaid Portfolio'
             backgroundImage={Portfolio}
-            projectUrl='https://abuzaid.tech'
-            tech='NextJs'
+            projectUrl='https://abuzaid.vercel.app'
+            desc='Portfolio'
+          />
+                     <ProjectItem
+            title='GreenMarmot'
+            backgroundImage={GM}
+            projectUrl='https://gmm-ahmed.vercel.app'
+            desc='Capsule Hotel'
           />
         </div>
       </div>
