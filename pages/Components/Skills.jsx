@@ -101,6 +101,46 @@ const Skills = () => {
                     <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
                         <div className='grid md:grid-cols-2 gap-4 justify-center items-center'>
                             <div className='m-auto'>
+                                <img src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg' width='64px' height='64px' alt='/' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>Python</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid md:grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <img src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored.svg' width='64px' height='64px' alt='/' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>Django</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid md:grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <img src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg' width='64px' height='64px' alt='/' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>PHP</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid md:grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
+                                <img src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg' width='64px' height='64px' alt='/' />
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <h3>Laravel</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                        <div className='grid md:grid-cols-2 gap-4 justify-center items-center'>
+                            <div className='m-auto'>
                                 <img src='https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored.svg' width='64px' height='64px' alt='/' />
                             </div>
                             <div className='flex flex-col items-center justify-center'>
