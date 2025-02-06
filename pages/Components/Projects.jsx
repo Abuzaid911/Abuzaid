@@ -38,6 +38,7 @@ const Projects = () => {
               projectUrl: "https://gmm-ahmed.vercel.app",
               // desc: "Capsule Hotel",
             },
+            
           ].map((project, index) => (
             <motion.div
               key={index}

@@ -22,7 +22,7 @@ const ProjectItem = ({ title, backgroundImage, projectUrl, desc }) => {
         <Link href={projectUrl || "#"} passHref>
           <motion.a
             whileHover={{ scale: 1.1 }}
-            className="mt-3 px-4 py-2 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition"
+            className="mt-3 px-4 py-2 bg-indigo-700 text-white rounded-lg shadow-md hover:bg-indigo-300 transition"
           >
             View Project
           </motion.a>
