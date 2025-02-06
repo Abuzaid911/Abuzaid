@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <Link legacyBehavior href='/'>
                     <a className='text-white text-2xl font-bold cursor-pointer'>
-                        Abu<span className='text-[#b538af]'>z</span>aid
+                        Abu<span className='text-indigo-700'>z</span>aid
                     </a>
                 </Link>
 
