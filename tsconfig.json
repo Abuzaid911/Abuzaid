@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/Components/Typing-effect.jsx"  ],
+, "components/Typing-effect.jsx"  ],
   "exclude": [
     "node_modules"
   ]
