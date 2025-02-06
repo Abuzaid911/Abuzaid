@@ -91,7 +91,7 @@ const Navbar = () => {
                         <div className='flex w-full items-center justify-between'>
                             <Link legacyBehavior href='/'>
                                 <a className='text-white text-2xl font-bold cursor-pointer'>
-                                    Abu<span className='text-[#b538af]'>z</span>aid
+                                    Abu<span className='text-indigo-700'>z</span>aid
                                 </a>
                             </Link>
                             <div
@@ -132,7 +132,7 @@ const Navbar = () => {
 
                         </ul>
                         <div className='pt-32'>
-                            <p className='uppercase tracking-widest text-[#b538af]'>
+                            <p className='uppercase tracking-widest text-indigo-700'>
                                 Let&#39;s Connect
                             </p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
