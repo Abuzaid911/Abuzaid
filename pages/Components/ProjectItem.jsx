@@ -1,20 +1,35 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-const ProjectItem = ({title, backgroundImage, tech, projectUrl}) => {
+const ProjectItem = ({ title, backgroundImage, projectUrl, desc }) => {
   return (
-    <div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-[#121111] rounded-xl group hover:bg-gradient-to-r from-[#e551c0] to-[#000000]'>
-    <Image className='rounded-xl group-hover:opacity-10' src={backgroundImage} alt='/' /> 
-    <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-        <h3 className='text-2xl text-white tracking-wider text-center'>{title}</h3>
-        <p className='pb-4 pt-2 text-white text-center'>{tech}</p>
-        <a href={projectUrl}>
-            <p className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer'>More Info</p>
-        </a>
-    </div>
- </div>
-  )
-}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      className="relative flex items-center justify-center h-[300px] w-full rounded-lg shadow-lg overflow-hidden group cursor-pointer"
+    >
+      <Image
+        src={backgroundImage}
+        alt={title}
+        layout="fill"
+        objectFit="cover"
+        className="transition duration-300 ease-in-out group-hover:opacity-80"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-300 flex flex-col justify-center items-center text-center p-4">
+        <h3 className="text-white text-xl font-bold">{title}</h3>
+        <p className="text-gray-300 text-sm">{desc}</p>
+        <Link href={projectUrl} passHref>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            className="mt-3 px-4 py-2 bg-indigo-700 text-white rounded-lg shadow-md hover:bg-purple-700 transition"
+          >
+            View Project
+          </motion.a>
+        </Link>
+      </div>
+    </motion.div>
+  );
+};
 
-export default ProjectItem
+export default ProjectItem;
