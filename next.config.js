@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+  images: {
+    domains: ["abuzaid-portfolio.vercel.app"], // 👈 Add your external image domain
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
