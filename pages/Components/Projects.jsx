@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ZeePost from "/public/assets/projects/ZeePost.png";
 import Portfolio from "/public/assets/projects/Portfolio.png";
 import GM from "/public/assets/projects/GM.png";
-import ProjectItem from "./ProjectItem";
+import ProjectItem from "../../components/ProjectItem";
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 50 },
