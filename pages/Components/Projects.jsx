@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import ZeePost from "/public/assets/projects/ZeePost.png";
 import Portfolio from "/public/assets/projects/Portfolio.png";
 import GM from "/public/assets/projects/GM.png";
-import OMW from "/public/assets/projects/omw.png";
-import Iftar from "/public/assets/projects/iftar.png";
+import OMW from "/public/assets/projects/OMW.png";
+import Iftar from "/public/assets/projects/Iftar.png";
 import ProjectItem from "../../components/ProjectItem";
 
 const fadeInVariants = {
