@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'

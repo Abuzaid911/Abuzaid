@@ -1,9 +1,12 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import ZeePost from "/public/assets/projects/ZeePost.png";
 import Portfolio from "/public/assets/projects/Portfolio.png";
 import GM from "/public/assets/projects/GM.png";
+import OMW from "/public/assets/projects/omw.png";
+import Iftar from "/public/assets/projects/iftar.png";
 import ProjectItem from "../../components/ProjectItem";
 
 const fadeInVariants = {
@@ -21,24 +24,25 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {[
             {
-              // title: "ZeePost",
               backgroundImage: ZeePost,
               projectUrl: "https://zee-post.vercel.app",
-              // desc: "Social App",
             },
             {
-              // title: "Abuzaid Portfolio",
               backgroundImage: Portfolio,
               projectUrl: "https://abuzaid.vercel.app",
-              // desc: "Portfolio",
             },
             {
-              // title: "GreenMarmot",
               backgroundImage: GM,
               projectUrl: "https://gmm-ahmed.vercel.app",
-              // desc: "Capsule Hotel",
             },
-            
+            {
+              backgroundImage: OMW,
+              projectUrl: "https://omw.abuzaid.dev",
+            },
+            {
+              backgroundImage: Iftar,
+              projectUrl: "https://contest-abuzaid911s-projects.vercel.app/",
+            },
           ].map((project, index) => (
             <motion.div
               key={index}
@@ -54,7 +58,7 @@ const Projects = () => {
                 desc={project.desc}
               />
             </motion.div>
-          ))}
+          ))}        
         </div>
       </div>
     </div>
