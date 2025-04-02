@@ -180,7 +180,7 @@ const Navbar = () => {
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <div className={`rounded-full shadow-lg ${isDarkMode ? '' : 'shadow-black'} p-3 cursor-pointer hover:scale-105 ease-in duration-300`}>
+                                    <div className={`rounded-full shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300`}>
                                         <FaLinkedinIn />
                                     </div>
                                 </a>
@@ -189,14 +189,14 @@ const Navbar = () => {
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <div className={`rounded-full shadow-lg ${isDarkMode ? '' : 'shadow-black'} p-3 cursor-pointer hover:scale-105 ease-in duration-300`}>
+                                    <div className={`rounded-full shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300`}>
                                         <FaGithub />
                                     </div>
                                 </a>
                                 <Link href='mailto:sabobee911@gmail.com'>
                                     <div
                                         onClick={() => setNav(!nav)}
-                                        className={`rounded-full shadow-lg ${isDarkMode ? '' : 'shadow-black'} p-3 cursor-pointer hover:scale-105 ease-in duration-300`}
+                                        className={`rounded-full shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300`}
                                     >
                                         <AiOutlineMail />
                                     </div>
