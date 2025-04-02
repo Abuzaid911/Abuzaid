@@ -8,6 +8,7 @@ import GM from "/public/assets/projects/GM.png";
 import OMW from "/public/assets/projects/OMW.png";
 import Iftar from "/public/assets/projects/Iftar.png";
 import ProjectItem from "../../components/ProjectItem";
+import { useTheme } from '../../context/ThemeContext';
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -15,10 +16,12 @@ const fadeInVariants = {
 };
 
 const Projects = () => {
+  const { isDarkMode } = useTheme();
+  
   return (
     <div id="projects" className="w-full py-16">
       <div className="max-w-[1240px] mx-auto px-4">
-        <h2 className="py-4 text-center text-white font-mono text-3xl">
+        <h2 className={`py-4 text-center ${isDarkMode ? 'text-white' : 'text-black'} font-mono text-3xl`}>
           Projects
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
@@ -58,7 +61,7 @@ const Projects = () => {
                 desc={project.desc}
               />
             </motion.div>
-          ))}        
+          ))}
         </div>
       </div>
     </div>

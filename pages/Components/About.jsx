@@ -30,6 +30,7 @@
 // };
 
 // export default About;
+'use client'
 import React from "react";
 import Image from "next/image";
 import { useTypingEffect } from "../../components/useTypingEffect"; // Import Hook

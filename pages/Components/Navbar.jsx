@@ -1,11 +1,15 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaSun, FaMoon } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import NavLogo from '/public/assets/navLogo.png';
 import NewLogo from '/public/assets/projects/newlogo.png';
+import { useTheme } from '../../context/ThemeContext';
+import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
+
 
 // import { useRouter } from 'next/router';
 
@@ -14,6 +18,8 @@ const Navbar = () => {
     const [shadow, setShadow] = useState(false);
     const [navBg, setNavBg] = useState('#111');
     const [linkColor, setLinkColor] = useState('#ecf0f3');
+    const { isDarkMode, toggleTheme } = useTheme();
+    
     const handleNav = () => {
         setNav(!nav);
     };
@@ -29,6 +35,17 @@ const Navbar = () => {
         window.addEventListener('scroll', handleShadow);
     }, []);
 
+    useEffect(() => {
+        // Update navbar colors based on theme
+        if (isDarkMode) {
+            setNavBg('#000');
+            setLinkColor('#ffffff');
+        } else {
+            setNavBg('#ffffff');
+            setLinkColor('#000');
+        }
+    }, [isDarkMode]);
+
     return (
         <div
             style={{ backgroundColor: `${navBg}` }}
@@ -40,13 +57,13 @@ const Navbar = () => {
         >
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <Link legacyBehavior href='/'>
-                    <a className='text-white text-2xl font-bold cursor-pointer'>
+                    <a className={`${isDarkMode ? 'text-white' : 'text-black'} text-2xl font-bold cursor-pointer`}>
                         Abu<span className='text-indigo-700'>z</span>aid
                     </a>
                 </Link>
 
                 <div>
-                    <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
+                    <ul style={{ color: `${linkColor}` }} className='hidden md:flex items-center'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>
                             <Link href='/'>Home</Link>
                         </li>
@@ -59,15 +76,37 @@ const Navbar = () => {
                         <li className='ml-10 text-sm uppercase hover:border-b'>
                             <Link href='/#projects'>Projects</Link>
                         </li>
-
+                        <li className='ml-10'>
+                            <button 
+                                onClick={toggleTheme} 
+                                className='p-2 rounded-full'
+                            >
+                                {isDarkMode ? (
+                                    <IoSunnyOutline className='' size={20} />
+                                ) : (
+                                    <IoMoonOutline className='' size={20} />
+                                )}
+                            </button>
+                        </li>
                     </ul>
 
-                    <div
-                        style={{ color: `${linkColor}` }}
-                        onClick={handleNav}
-                        className='md:hidden'
-                    >
-                        <AiOutlineMenu size={25} />
+                    <div className='flex items-center md:hidden'>
+                        <button 
+                            onClick={toggleTheme} 
+                            className='p-2 mr-3 rounded-full shadow-none'
+                        >
+                            {isDarkMode ? (
+                                <IoSunnyOutline className='' size={20} />
+                            ) : (
+                                <IoMoonOutline className='' size={20} />
+                            )}
+                        </button>
+                        <div
+                            style={{ color: `${linkColor}` }}
+                            onClick={handleNav}
+                        >
+                            <AiOutlineMenu size={25} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,32 +122,32 @@ const Navbar = () => {
                 <div
                     className={
                         nav
-                            ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#010306] p-10 ease-in duration-500'
+                            ? ` fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen ${isDarkMode ? 'bg-[#000]' : 'bg-[#ffffff]'} p-10 ease-in duration-500`
                             : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
                     }
                 >
                     <div>
                         <div className='flex w-full items-center justify-between'>
                             <Link legacyBehavior href='/'>
-                                <a className='text-white text-2xl font-bold cursor-pointer'>
+                                <a className={`${isDarkMode ? 'text-white' : 'text-black'} text-2xl font-bold cursor-pointer`}>
                                     Abu<span className='text-indigo-700'>z</span>aid
                                 </a>
                             </Link>
                             <div
                                 onClick={handleNav}
-                                className='rounded-full shadow-sm shadow-white p-3 cursor-pointer'
+                                className={`rounded-full shadow-sm ${isDarkMode ? 'shadow-white' : 'shadow-black'} p-3 cursor-pointer`}
                             >
                                 <AiOutlineClose />
                             </div>
                         </div>
-                        <div className='border-b border-gray-300 my-4'>
-                            <p className='w-[85%] md:w-[90%] py-4 font-mono'>
+                        <div className={`border-b ${isDarkMode ? 'border-gray-300' : 'border-gray-700'} my-4`}>
+                            <p className={`w-[85%] md:w-[90%] py-4 font-mono ${isDarkMode ? 'text-white' : 'text-black'}`}>
                                 Let&#39;s have fun!
                             </p>
                         </div>
                     </div>
                     <div className='py-4 flex flex-col'>
-                        <ul className='uppercase'>
+                        <ul className={`uppercase ${isDarkMode ? 'text-white' : 'text-black'}`}>
                             <Link href='/'>
                                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                                     Home
@@ -141,7 +180,7 @@ const Navbar = () => {
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <div className='rounded-full shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                    <div className={`rounded-full shadow-lg ${isDarkMode ? '' : 'shadow-black'} p-3 cursor-pointer hover:scale-105 ease-in duration-300`}>
                                         <FaLinkedinIn />
                                     </div>
                                 </a>
@@ -150,14 +189,14 @@ const Navbar = () => {
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <div className='rounded-full shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                    <div className={`rounded-full shadow-lg ${isDarkMode ? '' : 'shadow-black'} p-3 cursor-pointer hover:scale-105 ease-in duration-300`}>
                                         <FaGithub />
                                     </div>
                                 </a>
                                 <Link href='mailto:sabobee911@gmail.com'>
                                     <div
                                         onClick={() => setNav(!nav)}
-                                        className='rounded-full shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300'
+                                        className={`rounded-full shadow-lg ${isDarkMode ? '' : 'shadow-black'} p-3 cursor-pointer hover:scale-105 ease-in duration-300`}
                                     >
                                         <AiOutlineMail />
                                     </div>

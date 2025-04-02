@@ -4,8 +4,11 @@ import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { TypingEffect } from "../../components/Typing-effect";
+import { useTheme } from '../../context/ThemeContext';
 
 const Main = () => {
+    const { isDarkMode } = useTheme();
+    
     return (
         <div className='w-full h-screen text-center'>
             <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center '>
@@ -16,7 +19,7 @@ const Main = () => {
                         <TypingEffect className="whitespace-nowrap" words={["React", "Nextjs", "Java", "Web Development"]} />
                     </h1>
 
-                    <p className="uppercase text-sm tracking-widest text-[#e6e2e6b3] py-4">
+                    <p className={`uppercase text-sm tracking-widest ${isDarkMode ? 'text-white' : 'text-black'} py-4`}>
                         Enjoy Exploring
                     </p>
 
