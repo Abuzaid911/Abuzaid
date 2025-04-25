@@ -39,10 +39,6 @@ const Projects = () => {
               projectUrl: "https://gmm-ahmed.vercel.app",
             },
             {
-              backgroundImage: OMW,
-              projectUrl: "https://omw.abuzaid.dev",
-            },
-            {
               backgroundImage: Iftar,
               projectUrl: "https://contest-abuzaid911s-projects.vercel.app/",
             },
